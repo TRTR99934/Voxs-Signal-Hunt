@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vox's Signal Hunt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <div><p class="eyebrow">THE VEE TOWER • ROOFTOP RUN</p><h1>VOX'S <span>SIGNAL HUNT</span></h1></div>
+        <button id="reset" aria-label="Restart game">↻ Restart</button>
+      </header>
+      <section class="hud" aria-label="Game status">
+        <div class="objective">Collect every pride signal before the broadcast ends!</div>
+        <div class="counter"><span id="count">0</span> / <span id="total">6</span> FLAGS</div>
+      </section>
+      <section id="stage" class="stage" tabindex="0" aria-label="Game field. Use arrow keys or WASD to move Vox.">
+        <div class="skyline" aria-hidden="true"></div><div class="scanlines" aria-hidden="true"></div>
+        <div class="sign sign-one">PRIDE<br><i>FREQUENCY</i></div><div class="sign sign-two">LIVE<br><i>TONIGHT</i></div>
+        <img id="player" class="player" src="assets/vox.png" alt="Vox" />
+        <div id="flags" aria-label="Collectible transgender flags"></div>
+        <div id="message" class="message">Use <b>WASD</b> or <b>arrow keys</b> to move Vox.</div>
+        <div id="ending" class="ending" hidden>
+          <div class="sparkles">✦ ✧ ✦</div>
+          <p class="eyebrow">BROADCAST COMPLETE</p><h2>VOX BECOMES <em>VOXINA!</em></h2>
+          <div class="finale"><img src="assets/voxina.png" alt="Voxina" /><div class="heart">♥</div><img src="assets/alastor.png" alt="Alastor" /></div>
+          <p>Alastor steps into frame and gives Voxina a celebratory kiss. The whole city tunes in. ♥</p>
+          <button id="again">Play again</button>
+        </div>
+      </section>
+      <p class="tip">Tip: the flags will glow when Vox gets close. Collect them all to unlock the finale.</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
